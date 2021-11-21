@@ -1,0 +1,28 @@
+<div class=container>
+  <div class=content>
+    <img [src]="urlImage" alt="Logo Storybook" />
+    <app-title>Bem vindo!</app-title>
+    <p>Essa página possui componentes simples para demonstrar os recursos do Storybook.</p>
+
+    <form>
+      <app-input
+        [type]="'text'"
+        [id]="'user'"
+        [iconName]="'person'"
+        [placeholder]="'Nome de usuário'"
+      >
+      </app-input>
+
+      <app-input
+        [type]="'password'"
+        [id]="'password'"
+        [iconName]="'lock'"
+        [placeholder]="'Senha de acesso'"
+      >
+      </app-input>
+
+      <app-button [type]="'submit'" (click)="buttonClick()">Entrar</app-button>
+    </form>
+  </div>
+  <div class=background></div>
+</div>

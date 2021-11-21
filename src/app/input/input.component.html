@@ -1,0 +1,13 @@
+<div class=container>
+  <label *ngIf="label" [htmlFor]="id">{{ label }}</label>
+  <div class="content {{ hasInputError ? 'inputError' : ''}}">
+    <span *ngIf="iconName" class="material-icons">{{iconName}}</span>
+    <input
+      [id]="id"
+      [type]="type"
+      [placeholder]="placeholder"
+      (blur)="handleBlur($event)"
+      (focus)="handleFocus()"
+    />
+  </div>
+</div>
