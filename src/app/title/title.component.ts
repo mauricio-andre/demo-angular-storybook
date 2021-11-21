@@ -5,4 +5,4 @@ import { Component } from "@angular/core";
   template: '<h1><ng-content></ng-content></h1>',
   styleUrls: ['./title.component.scss']
 })
-export class CustomTitleComponent {}
+export class TitleComponent {}

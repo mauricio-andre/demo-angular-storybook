@@ -3,5 +3,6 @@
   (click)="click()"
   type="submit"
 >
-  <ng-content></ng-content>
+  {{label}}
+  <ng-content *ngIf="!label"></ng-content>
 </button>
