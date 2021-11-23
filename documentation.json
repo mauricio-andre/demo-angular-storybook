@@ -84,7 +84,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-018b48ce397270aa63591b0ea6afd165",
+            "id": "component-ButtonComponent-365fae6623b0e0c30866ffb8fbe8f4a6",
             "file": "src/app/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -106,15 +106,23 @@
                     "defaultValue": "() => {}",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 12,
                     "type": "function"
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string"
                 },
                 {
                     "name": "primary",
                     "defaultValue": "true",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 9,
+                    "line": 10,
                     "type": "boolean"
                 },
                 {
@@ -122,7 +130,7 @@
                     "defaultValue": "'button'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
+                    "line": 11,
                     "type": "\"button\" | \"submit\" | \"reset\""
                 }
             ],
@@ -136,7 +144,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-button[type]',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent {\n  @Input() primary: boolean = true;\n  @Input() type: 'button' | 'submit' | 'reset' = 'button';\n  @Input() click: () => void = () => {};\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-button[type]',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent {\n  @Input() label: string = '';\n  @Input() primary: boolean = true;\n  @Input() type: 'button' | 'submit' | 'reset' = 'button';\n  @Input() click: () => void = () => {};\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -145,7 +153,7 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<button\n  class=\"buttonClass {{ !primary ? 'buttonClassSecondary' : ''}}\"\n  (click)=\"click()\"\n  type=\"submit\"\n>\n  <ng-content>Enviar</ng-content>\n</button>\n"
+            "templateData": "<button\n  class=\"buttonClass {{ !primary ? 'buttonClassSecondary' : ''}}\"\n  (click)=\"click()\"\n  type=\"submit\"\n>\n  {{label}}\n  <ng-content *ngIf=\"!label\"></ng-content>\n</button>\n"
         },
         {
             "name": "ButtonComponent2",
@@ -695,6 +703,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "CompleteExample",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -877,6 +895,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InputComponent>",
+                "defaultValue": "(args: InputComponent) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/title/title.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -894,10 +922,40 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "WithIconAndPlaceholder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "WithLabel",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/input/input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "WithoutText",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/app/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "WithPlaceholder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/input/input.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -908,6 +966,58 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "src/app/input/input.component.stories.ts": [
+                {
+                    "name": "CompleteExample",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InputComponent>",
+                    "defaultValue": "(args: InputComponent) => ({\n  props: args,\n})"
+                },
+                {
+                    "name": "WithIconAndPlaceholder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "WithLabel",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "WithPlaceholder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/input/input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                }
+            ],
             "src/test.ts": [
                 {
                     "name": "context",
@@ -1357,7 +1467,57 @@
                 "linktype": "component",
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "CompleteExample",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithIconAndPlaceholder",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithLabel",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/input/input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithPlaceholder",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
